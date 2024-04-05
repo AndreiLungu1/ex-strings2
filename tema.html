@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>dsadsadsa</p>
+
+    <script>
+      //  1.1 Verifica daca numele "Daniel" se afla pe lista.
+      let badKids =
+        "Lista copiilor pedepsiti este urmatoarea: Manuela, Daniel, Vicentiu";
+      console.log(badKids);
+      if (badKids.includes("Daniel")) {
+        console.log("Numele Daniel se afla pe lista");
+      } else {
+        console.log("Numele Daniel nu se afla pe lista");
+      }
+
+      //  1.2 Daca numele "Daniel" se afla pe lista, modifica lista, astfel incat in locul lui "Daniel" sa contina "Cornel".
+      if (badKids.includes("Daniel")) {
+        console.log(badKids.replace("Daniel", "Cornel"));
+      }
+
+      // 2. Se da urmatorul string:
+      const testGrades = "9.80/6.85/9.10/7.80/8.20";
+      // Sa se calculeze media aritmetica a notelor.
+      // HINT: Transforma string-ul intr-un array si apoi itereaza prin array.
+      let arrayList = testGrades.split("/");
+      console.log(arrayList);
+
+      let sum = 0;
+      for (i = 0; i < arrayList.length; i++) {
+        sum = sum + Number(arrayList[i]);
+      }
+      console.log(sum);
+      let arithmeticSum = sum / arrayList.length;
+      console.log(arithmeticSum);
+
+      // 3. Se da urmatorul obiect:
+      const props = {
+        name: "Minge fotbal Nike T90",
+        price: 220,
+        currency: "RON",
+        brand: "Nike",
+      };
+      // 3.1. Extrage din obiect valorile urmatoarelor proprietati: name, price, currency.
+      const { name, price, currency } = props;
+
+      // 3.2. Folosind proprietatile extrase anterior, afiseaza un mesaj de forma: "Produsul TODO are pretul TODO".
+      const properties = `Produsul ${name} are pretul ${price} ${currency}.`;
+      console.log(properties);
+
+
+
+      // 4. Se da inca un obiect:
+      const additionalProps = {
+        isAvailable: true,
+      };
+      // Creeaza un obiect nou, care sa contina proprietatile obiectelor props si additionalProps.
+      const newObject = {
+        ...props,
+        ...additionalProps
+      };
+      console.log(newObject);
+
+    </script>
+  </body>
+</html>

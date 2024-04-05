@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Vezi mai jos exemple de metode folosite pe string-uri</p>
+    <script>
+        //Extragem un subsir dintr-un string
+        //Folosind metoda substring - care primeste 2 parametrii -> o sa returneze subsirul de la parametrul 1(indexul de inceput pentru string) pana la si excluzand parametrul 2 (indexul de sfarsit pentru string)
+        //         0123456789....
+        var cnp = "1980212648821";
+        var year = cnp.substring(1, 3);
+        console.log(year);
+        var month = cnp.substring(3, 5);
+        console.log(month);
+
+        //Cand pasam doar un argument catre metoda substring - inseamna ca va extrage pana la sfarsitul string-ului deoarecce nu este furnizat al 2-lea argument care reprezinta indexul de final
+        var cnpWithoutBirthDate = cnp.substring(7);
+        console.log(cnpWithoutBirthDate);
+
+
+        //Cautam un string intr-un alt string
+        var brandList = "Masini permise: Jaguar, Porsche, Mercedes";
+        var isJaguarIncluded = brandList.includes("Jaguar");
+        console.log(isJaguarIncluded);
+
+        //Inlocuim un subsir dintr-un string cu un alt subsir
+        var sentence = "Vreau sa merg la mare";
+        //Metoda replace nu modifica string-ul - ci ne returneaza un nou string cu modificarile facute
+        sentence = sentence.replace("mare", "munte");
+        console.log(sentence);
+
+        //Transformam un string intr-un array, in functie de un separator
+        var textLine = "Google,Facebook,Amazon,Apple";
+        var brands = textLine.split(',');
+        console.log(brands);
+    </script>
+</body>
+</html>

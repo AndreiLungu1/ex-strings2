@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Vezi mai jos exemple de baza pentru string-uri</p>
+    <script>
+        var name = "Maria";
+        //Extragem primul caracter
+        var firstLetter = name[0];
+        console.log(firstLetter);
+    
+        //Accesam lungimea string-ului
+        var nameLength = name.length;
+        console.log(nameLength);
+
+        //String-urile sunt IMUTABILE - adica nu pot fi modificate partial
+        name[0] = "D";
+        console.log(name);
+
+        //Punem un exemplu cu array-uri - unde putem modifica partial array-ul
+        var animals = ['caine', 'pisica'];
+        animals[0] = 'papagal';
+        console.log(animals);
+        
+        //Pentru a modifica din nou string-ul trebuie sa ii asignez o noua valoare 
+        name = "Daria";
+        console.log(name);
+    </script>
+</body>
+</html>
